@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Loops</title>
+</head>
+<body>
+    <script>
+     //for loop
+     for(let i=5;i=50;i=i+5){
+         console.log(i)
+     }
+
+     let n=prompt("write your number:");
+     n=parseInt(n);
+     for(let i=n;i<=n*10;i=i+n){
+        console.log(i);
+     }
+
+     //nested for loop
+     for(let i=1;i<=3;i++){
+        for(let j=1;j<=3;j++){
+            console.log(i);
+        }
+     }
+
+     //while loop
+     const favourite="Chhava"
+     let guess=prompt("guess my favourite movie");
+     while((guess!=favourite)&&(guess!="quit")){
+        guess=prompt("Wrong guess please try again");
+     }
+     if(guess==favourite){
+        console.log("congrats!");
+     }else{
+        console.log("you quit");
+     }
+
+     //loops with array
+     let fruits=["Mango","Apple","Banana","Orange"];
+     for(let i=0;i<=fruits.length;i++){
+        console.log(i,fruits[i]);
+     }
+     
+     let heroes=[["ironman","spiderman","thar"],["Superman","wonder","flash"]];
+     for(let i=0;i<heroes.length;i++){
+        console.log(i,heroes[i]);
+        for(let j=0;j<heroes[i].length;j++){
+            console.log(`j = ${j},${heroes[i][j]}`); 
+        }
+     }
+
+     //for-of loop
+     let heroes1=[["ironman","spiderman","thar"],["Superman","wonder","flash"]];
+     for(list of heroes1){
+        for(hero of list){
+            console.log(hero);
+        }
+     }
+    </script>
+</body>
+</html>
