@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Methods and Loops</title>
+</head>
+<body>
+    <script>
+      //String Methods
+        
+      // Trim method 
+      let str = "   Hello, World!   ";
+      let trimmedStr = str.trim();
+      console.log(trimmedStr); 
+
+     //toUpperCase method 
+      let str1 = "hello world";
+      let upperStr = str1.toUpperCase();
+      console.log(upperStr); 
+
+      //tolowercase method
+      let str2="GOOD MORNING"
+      let lowerstr= str2.toLowerCase();
+      console.log(lowerstr);
+
+      //Replace Method
+      let str3="BestLuck"
+      let replacestr=str3.replace("Best","Good")
+      console.log(replacestr);
+
+      //Repeat Method
+      let text = "Hello ";
+      let repeatedText = text.repeat(3);
+      console.log(repeatedText);
+
+     //Array method
+
+      //push method
+      let fruits = ["Apple", "Banana", "Orange"];
+      fruits.push("Mango"); 
+      console.log(fruits);
+
+      //pop method
+      let cars=["maruti","audi","innova","BMW"]
+      cars.pop();
+      console.log(cars);
+
+      //unshift nethod
+      let cars1=["maruti","audi","innova","BMW"]
+      cars1.unshift("Toyoto");
+      console.log(cars1);
+
+      //shift method
+      let queue = ["John", "Jane", "Mike", "Emma"];
+      queue.shift();
+      console.log(queue);
+
+      //IndexOf method
+      let primary=["red","yellow","blue"];
+      primary.indexOf("yellow");
+      console.log(primary);
+
+      //Includes method
+      let colors = ["red", "green", "blue"]; 
+      colors.includes("red");
+      console.log(colors);
+
+      //Concat method
+      let color=["red","yellow","blue"];
+      let color1=["white","pink","black"];
+      color.concat(color1);
+
+      //Reverse method
+      let fruit = ["Apple", "Banana", "Orange"];
+      fruit.reverse();
+      console.log(fruit);
+
+      //Slice method
+      let numbers = [10, 20, 30, 40, 50];
+      let slicedNumbers = numbers.slice(2); 
+      console.log(slicedNumbers); 
+
+      //Splice method
+      let items = ["Pen", "Pencil", "Eraser", "Sharpener", "Notebook"];
+      items.splice(2);
+      console.log(items); 
+
+      //Sort Method
+      let letters=['a','d','b','s','p'];
+      letters.sort();
+      console.log(letters);
+    </script>
+</body>
+</html>
