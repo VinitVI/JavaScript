@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Function</title>
+</head>
+<body>
+    <script>
+        function hello(){
+            console.log("hello")
+        }
+        hello();
+
+        let arr=["Google","microsoft","amazon","wipro"]
+        function getarray(arr){
+            let result;
+            for(let i=0;i<str.length;i++){
+                result +=str[i];
+            }
+            return result;
+        };
+
+        let greet="hello";
+        function changeGreet(){
+            let greet="namaste";
+            console.log(greet);
+            function innerGreet(){
+                console.log(greet);
+            }
+        }
+        console.log(greet);
+        changeGreet();
+
+        function OddEventest(request){
+            if(request=="odd"){
+                return function(n){
+                    console.log(!(n%2==0));
+                }
+            }else if(request=="even"){
+                return function(n){
+                    console.log(n%2==0);
+                }
+            }else{
+                console.log("wrong password");
+            }
+        }
+
+        let country=["Autralia","Germany","India"];
+
+        function longestName(country){
+            let ansIdx=0;
+            for(let i=0;i<country.length;i++){
+                let anslen=country[ansIdx].length;
+                let currLen=country[i].length;
+                if(currLen>anslen){
+                    ansIdx=i;
+                }
+            }
+            return country[ansIdx];
+        }
+        longestName(country);
+    </script>
+</body>
+</html>
