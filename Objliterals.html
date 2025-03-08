@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object literals</title>
+</head>
+<body>
+    <script>
+        //Object creation
+        const item={
+            price:100,
+            discount:50,
+            colors:["red","pink"]
+        };
+
+        const post={
+            username:"@vinitjadhav",
+            content:"This is my #FirstPost",
+            likes:150,
+            reports:5,
+            tags:["@ram sagar","@swaraj patil"]
+        };
+
+        //Objects of objects
+        const studentInfo={
+            aman:{
+                grade:"A+",
+                city:"Mumbai"
+            },
+            raj:{
+                grade:"A",
+                city:"pune",
+            },
+            Karan:{
+                grade:"0",
+                city:"Delhi"
+            }
+        };
+
+        //Array of object
+        const classInfo=[
+            {
+                name:"vinit",
+                marks:"90"
+            },
+            {
+                name:"kartik",
+                marks:"95"
+            },
+            {
+                name:"karan",
+                marks:"98",
+            }
+        ];
+
+        //Guessing game using Math object
+        const max=prompt("enter the mac number");
+
+        const random=Math.floor(Math.random()*max)+1;
+        let guess=prompt("guess the number");
+        while(true){
+            if(guess=="quit"){
+                console.log("user quit");
+                break;
+            }
+            if(guess==random){
+                console.log("you are right! Congrats! random number was", random);
+                break;
+            }else if(guess<random){
+                guess=prompt("your guess was two small. please try again");
+            }else{
+                guess=prompt("your guess was two large. Please try again");
+            }
+        };
+    </script>
+</body>
+</html>
