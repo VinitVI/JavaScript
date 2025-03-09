@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            height:100px;
+            width: 500px;
+            border:1px solid black;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Click me!</button>
+    <br>
+    <form action="/action">
+        <input placeholder="username">
+        <button>Submit</button>
+    </form>
+    <br><br>
+    <h3>Generate a random color</h3><br>
+    <button id="btn2">Generate Color</button><br><br>
+    <div>This is your color</div>
+
+    <script>
+        let btn1=document.getElementById("btn1");
+        btn1.addEventListener("click",sayhello);
+        function sayhello(){
+            console.log("hello")
+        }
+   
+        let form=document.querySelector("form");
+        form.addEventListener("submit",function(event){
+            console.log("form submitted");
+        });
+
+        let btn=document.getElementById("btn2");
+        btn.addEventListener("click",function(){
+            let h3=document.querySelector("h3")
+            let randomColor=getRandomColor();
+            h3.innerText=randomColor;
+
+            let div=document.querySelector("div")
+            div.style.background=randomColor;
+            console.log("color updated")
+        });
+
+        function getRandomColor(){
+            let red=Math.floor(Math.random()*255);
+            let green=Math.floor(Math.random()*255);
+            let blue=Math.floor(Math.random()*255);
+
+            let color=`rgb(${red},${green},${blue})`;
+            return color;
+        }
+    </script>
+</body>
+</html>
