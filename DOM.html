@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+    <style>
+        .btnStyle {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let button = document.createElement("button");
+        let input = document.createElement("input");
+        button.innerText = "Click me";
+
+        document.querySelector("body").append(input);
+        document.querySelector("body").append(button);
+
+        button.setAttribute("id", "btn");
+        input.setAttribute("placeholder", "username");
+
+        // Add class to button
+        let btn = document.querySelector("#btn");
+        btn.classList.add("btnStyle");
+
+        // Create and append h1 element
+        let h1 = document.createElement("h1");
+        h1.innerHTML = "<u>DOM Practice</u>";
+        document.querySelector("body").append(h1);
+    </script>
+</body>
+</html>
